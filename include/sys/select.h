@@ -33,10 +33,6 @@ typedef struct {
 #define NFDBITS (8*(int)sizeof(long))
 #endif
 
-#if _REDIR_TIME64
-__REDIR(select, __select_time64);
-__REDIR(pselect, __pselect_time64);
-#endif
 
 #ifdef __cplusplus
 }

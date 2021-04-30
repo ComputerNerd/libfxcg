@@ -172,4 +172,3 @@ heapsort(void *vbase, size_t nmemb, size_t size,
 	free(k);
 	return (0);
 }
-DEF_WEAK(heapsort);

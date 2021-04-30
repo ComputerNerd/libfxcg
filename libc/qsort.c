@@ -121,6 +121,8 @@ med3(char *a, char *b, char *c, int (*cmp)(const void *, const void *))
               :(cmp(b, c) > 0 ? b : (cmp(a, c) < 0 ? a : c ));
 }
 
+int heapsort(void *vbase, size_t nmemb, size_t size, int (*compar)(const void *, const void *));
+
 static void
 introsort(char *a, size_t n, size_t es, size_t maxdepth, int swaptype,
     int (*cmp)(const void *, const void *))
@@ -235,4 +237,3 @@ qsort(void *a, size_t n, size_t es, int (*cmp)(const void *, const void *))
 
 }
 
-DEF_STRONG(qsort);

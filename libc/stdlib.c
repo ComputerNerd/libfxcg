@@ -53,25 +53,6 @@ void exit(int status) {
         GetKey(&key);
 }
 
-void abort() {
-    fprintf(stderr, "ABORT CALLED\nPress menu key to exit\n");
-#ifndef STDERR_TO_VRAM
-    /* Initialize the status area so that it can display text
-     * (the user code may have set the flags in some other way, or
-     * disabled the status area entirely)
-     */
-    EnableStatusArea(0);
-    DefineStatusAreaFlags(3, SAF_BATTERY | SAF_TEXT | SAF_GLYPH | SAF_ALPHA_SHIFT, 0, 0);
-    DefineStatusMessage((char*)"Aborted, press [MENU].", 1, 0, 0);
-    DisplayStatusArea(); /* not sure if necessary, I have the idea that,
-     * at least in some circumstances, GetKey calls DisplayStatusArea().
-     */
-#endif
-    int key;
-    while(1)
-        GetKey(&key);
-}
-
 static unsigned char strtol_consume(unsigned char c, int base) {
     c = toupper(c);
     if (!isalnum(c))

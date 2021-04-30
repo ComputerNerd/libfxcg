@@ -11,6 +11,7 @@ int abs(int n);
 
 void free(void *p);
 void *malloc(size_t sz);
+void *calloc(size_t elements, size_t elementSize);
 void *realloc(void *p, size_t sz);
 
 int rand(void);

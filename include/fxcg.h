@@ -28,7 +28,6 @@ void *memsetZero(void *s, size_t n);
 
 int sys_atoi(const char * s);
 
-void *sys_calloc(int elements, int elementSize);
 
 char *sys_strcat(char *dest, const char *src);
 char *sys_strchr(const char *s, int c);
@@ -43,7 +42,6 @@ char *sys_strncpy(char *dest, const char *src, size_t n);
 #define rand sys_rand
 #define srand sys_rand
 #define malloc sys_malloc
-#define calloc sys_calloc
 #define realloc sys_realloc
 #define free sys_free
 #define memcmp sys_memcmp

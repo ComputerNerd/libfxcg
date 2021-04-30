@@ -2,7 +2,7 @@ TOOLCHAIN_PREFIX=sh3eb-elf-
 CC=$(TOOLCHAIN_PREFIX)gcc
 AS=$(TOOLCHAIN_PREFIX)as
 AR=$(TOOLCHAIN_PREFIX)ar
-CFLAGS=-c -ffunction-sections -fdata-sections -Os \
+CFLAGS=-c -Os \
 	   -m4a-nofpu -mhitachi -ffreestanding -Wall -Wsystem-headers -g -I../include
 LDFLAGS=-Wl,-static -lfxcg
 ARFLAGS=rsv
